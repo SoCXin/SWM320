@@ -1,14 +1,20 @@
-﻿# [allwinner全志](https://github.com/sochub/allwinner)
-[![sites](SoC/qitas.png)](http://www.qitas.cn) 
-####  qitas@qitas.cn
+﻿# [SWM320](https://github.com/SoCXin/SWM320)
 
-[全志科技（Allwinner Technology）](http://www.allwinnertech.com/) 成立于2007年，是领先的智能应用处理器SoC、高性能模拟器件和无线互联芯片设计厂商。
+[![sites](http://182.61.61.133/link/resources/SoC.png)](http://www.SoC.Xin)
 
-###  [收录产品](https://github.com/sochub/allwinner)  
+#### [Vendor](https://github.com/SoCXin/Vendor) ：[Synwit](http://www.synwit.cn)
+#### [Core](https://github.com/SoCXin/Cortex)：[Cortex M4](https://github.com/sochub/CM4)
+#### [Level](https://github.com/SoCXin/Level)：120MHz
 
-- [H6](https://github.com/sochub/H6) 
-- [V5](https://github.com/sochub/V5) 
-- [A64](https://github.com/sochub/A64) 
+[SWM320](https://github.com/SoCXin/SWM320)
 
+### [资源收录](https://github.com/SoCXin)
 
-###  [SoC开发平台](http://www.qitas.cn)   
+* [文档](docs/)
+* [资源](src/)
+
+### [选型建议](https://github.com/SoCXin)
+
+[SWM320](https://github.com/SoCXin/SWM320)
+
+###  [SoC芯平台](http://www.SoC.Xin)
