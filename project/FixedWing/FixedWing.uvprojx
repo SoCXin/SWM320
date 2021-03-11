@@ -7,9 +7,11 @@
 
   <Targets>
     <Target>
-      <TargetName>FixedWing</TargetName>
+      <TargetName>Qitas</TargetName>
       <ToolsetNumber>0x4</ToolsetNumber>
       <ToolsetName>ARM-ADS</ToolsetName>
+      <pCCUsed>5060750::V5.06 update 6 (build 750)::ARMCC</pCCUsed>
+      <uAC6>0</uAC6>
       <TargetOption>
         <TargetCommonOption>
           <Device>SWM320xE</Device>
@@ -84,6 +86,8 @@
             <UserProg2Name>fromelf --text -a -c -o "$L@L.asm" "#L"</UserProg2Name>
             <UserProg1Dos16Mode>0</UserProg1Dos16Mode>
             <UserProg2Dos16Mode>0</UserProg2Dos16Mode>
+            <nStopA1X>0</nStopA1X>
+            <nStopA2X>0</nStopA2X>
           </AfterMake>
           <SelectedForBatchBuild>0</SelectedForBatchBuild>
           <SVCSIdString></SVCSIdString>
@@ -122,58 +126,17 @@
             <HexOffset>0</HexOffset>
             <Oh166RecLen>16</Oh166RecLen>
           </OPTHX>
-          <Simulator>
-            <UseSimulator>0</UseSimulator>
-            <LoadApplicationAtStartup>1</LoadApplicationAtStartup>
-            <RunToMain>1</RunToMain>
-            <RestoreBreakpoints>1</RestoreBreakpoints>
-            <RestoreWatchpoints>1</RestoreWatchpoints>
-            <RestoreMemoryDisplay>1</RestoreMemoryDisplay>
-            <RestoreFunctions>1</RestoreFunctions>
-            <RestoreToolbox>1</RestoreToolbox>
-            <LimitSpeedToRealTime>0</LimitSpeedToRealTime>
-            <RestoreSysVw>1</RestoreSysVw>
-          </Simulator>
-          <Target>
-            <UseTarget>1</UseTarget>
-            <LoadApplicationAtStartup>1</LoadApplicationAtStartup>
-            <RunToMain>1</RunToMain>
-            <RestoreBreakpoints>1</RestoreBreakpoints>
-            <RestoreWatchpoints>1</RestoreWatchpoints>
-            <RestoreMemoryDisplay>1</RestoreMemoryDisplay>
-            <RestoreFunctions>0</RestoreFunctions>
-            <RestoreToolbox>1</RestoreToolbox>
-            <RestoreTracepoints>0</RestoreTracepoints>
-            <RestoreSysVw>1</RestoreSysVw>
-          </Target>
-          <RunDebugAfterBuild>0</RunDebugAfterBuild>
-          <TargetSelection>11</TargetSelection>
-          <SimDlls>
-            <CpuDll></CpuDll>
-            <CpuDllArguments></CpuDllArguments>
-            <PeripheralDll></PeripheralDll>
-            <PeripheralDllArguments></PeripheralDllArguments>
-            <InitializationFile></InitializationFile>
-          </SimDlls>
-          <TargetDlls>
-            <CpuDll></CpuDll>
-            <CpuDllArguments></CpuDllArguments>
-            <PeripheralDll></PeripheralDll>
-            <PeripheralDllArguments></PeripheralDllArguments>
-            <InitializationFile></InitializationFile>
-            <Driver>STLink\ST-LINKIII-KEIL_SWO.dll</Driver>
-          </TargetDlls>
         </DebugOption>
         <Utilities>
           <Flash1>
             <UseTargetDll>1</UseTargetDll>
             <UseExternalTool>0</UseExternalTool>
             <RunIndependent>0</RunIndependent>
-            <UpdateFlashBeforeDebugging>0</UpdateFlashBeforeDebugging>
+            <UpdateFlashBeforeDebugging>1</UpdateFlashBeforeDebugging>
             <Capability>1</Capability>
             <DriverSelection>4103</DriverSelection>
           </Flash1>
-          <bUseTDR>0</bUseTDR>
+          <bUseTDR>1</bUseTDR>
           <Flash2>STLink\ST-LINKIII-KEIL_SWO.dll</Flash2>
           <Flash3>"" ()</Flash3>
           <Flash4></Flash4>
@@ -221,12 +184,15 @@
             <hadXRAM>0</hadXRAM>
             <uocXRam>0</uocXRam>
             <RvdsVP>0</RvdsVP>
+            <RvdsMve>0</RvdsMve>
+            <RvdsCdeCp>0</RvdsCdeCp>
             <hadIRAM2>0</hadIRAM2>
             <hadIROM2>0</hadIROM2>
             <StupSel>8</StupSel>
             <useUlib>1</useUlib>
             <EndSel>0</EndSel>
             <uLtcg>0</uLtcg>
+            <nSecure>0</nSecure>
             <RoSelD>3</RoSelD>
             <RwSelD>3</RwSelD>
             <CodeSel>0</CodeSel>
@@ -360,12 +326,20 @@
             <uThumb>0</uThumb>
             <uSurpInc>0</uSurpInc>
             <uC99>0</uC99>
+            <uGnu>0</uGnu>
             <useXO>0</useXO>
+            <v6Lang>1</v6Lang>
+            <v6LangP>1</v6LangP>
+            <vShortEn>1</vShortEn>
+            <vShortWch>1</vShortWch>
+            <v6Lto>0</v6Lto>
+            <v6WtE>0</v6WtE>
+            <v6Rtti>0</v6Rtti>
             <VariousControls>
               <MiscControls></MiscControls>
               <Define></Define>
               <Undefine></Undefine>
-              <IncludePath>..\..\SWM320_StdPeriph_Driver\CSL\CMSIS\CoreSupport;..\..\SWM320_StdPeriph_Driver\CSL\CMSIS\DeviceSupport;..\..\SWM320_StdPeriph_Driver\CSL\SWM320_StdPeriph_Driver;..\FixedWing</IncludePath>
+              <IncludePath>..\CSL\CMSIS\CoreSupport;..\CSL\CMSIS\DeviceSupport;..\CSL\SWM320_StdPeriph_Driver;..\FixedWing</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -378,6 +352,7 @@
             <NoWarn>0</NoWarn>
             <uSurpInc>0</uSurpInc>
             <useXO>0</useXO>
+            <ClangAsOpt>1</ClangAsOpt>
             <VariousControls>
               <MiscControls></MiscControls>
               <Define></Define>
@@ -416,92 +391,102 @@
           </Files>
         </Group>
         <Group>
+          <GroupName>SBUS</GroupName>
+          <Files>
+            <File>
+              <FileName>SBUS.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\SBUS.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
           <GroupName>CSL\StdPD</GroupName>
           <Files>
             <File>
               <FileName>SWM320_adc.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\SWM320_StdPeriph_Driver\CSL\SWM320_StdPeriph_Driver\SWM320_adc.c</FilePath>
+              <FilePath>..\CSL\SWM320_StdPeriph_Driver\SWM320_adc.c</FilePath>
             </File>
             <File>
               <FileName>SWM320_exti.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\SWM320_StdPeriph_Driver\CSL\SWM320_StdPeriph_Driver\SWM320_exti.c</FilePath>
+              <FilePath>..\CSL\SWM320_StdPeriph_Driver\SWM320_exti.c</FilePath>
             </File>
             <File>
               <FileName>SWM320_gpio.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\SWM320_StdPeriph_Driver\CSL\SWM320_StdPeriph_Driver\SWM320_gpio.c</FilePath>
+              <FilePath>..\CSL\SWM320_StdPeriph_Driver\SWM320_gpio.c</FilePath>
             </File>
             <File>
               <FileName>SWM320_i2c.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\SWM320_StdPeriph_Driver\CSL\SWM320_StdPeriph_Driver\SWM320_i2c.c</FilePath>
+              <FilePath>..\CSL\SWM320_StdPeriph_Driver\SWM320_i2c.c</FilePath>
             </File>
             <File>
               <FileName>SWM320_pwm.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\SWM320_StdPeriph_Driver\CSL\SWM320_StdPeriph_Driver\SWM320_pwm.c</FilePath>
+              <FilePath>..\CSL\SWM320_StdPeriph_Driver\SWM320_pwm.c</FilePath>
             </File>
             <File>
               <FileName>SWM320_timr.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\SWM320_StdPeriph_Driver\CSL\SWM320_StdPeriph_Driver\SWM320_timr.c</FilePath>
+              <FilePath>..\CSL\SWM320_StdPeriph_Driver\SWM320_timr.c</FilePath>
             </File>
             <File>
               <FileName>SWM320_uart.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\SWM320_StdPeriph_Driver\CSL\SWM320_StdPeriph_Driver\SWM320_uart.c</FilePath>
+              <FilePath>..\CSL\SWM320_StdPeriph_Driver\SWM320_uart.c</FilePath>
             </File>
             <File>
               <FileName>SWM320_wdt.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\SWM320_StdPeriph_Driver\CSL\SWM320_StdPeriph_Driver\SWM320_wdt.c</FilePath>
+              <FilePath>..\CSL\SWM320_StdPeriph_Driver\SWM320_wdt.c</FilePath>
             </File>
             <File>
               <FileName>SWM320_dma.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\SWM320_StdPeriph_Driver\CSL\SWM320_StdPeriph_Driver\SWM320_dma.c</FilePath>
+              <FilePath>..\CSL\SWM320_StdPeriph_Driver\SWM320_dma.c</FilePath>
             </File>
             <File>
               <FileName>SWM320_flash.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\SWM320_StdPeriph_Driver\CSL\SWM320_StdPeriph_Driver\SWM320_flash.c</FilePath>
+              <FilePath>..\CSL\SWM320_StdPeriph_Driver\SWM320_flash.c</FilePath>
             </File>
             <File>
               <FileName>SWM320_port.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\SWM320_StdPeriph_Driver\CSL\SWM320_StdPeriph_Driver\SWM320_port.c</FilePath>
+              <FilePath>..\CSL\SWM320_StdPeriph_Driver\SWM320_port.c</FilePath>
             </File>
             <File>
               <FileName>SWM320_spi.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\SWM320_StdPeriph_Driver\CSL\SWM320_StdPeriph_Driver\SWM320_spi.c</FilePath>
+              <FilePath>..\CSL\SWM320_StdPeriph_Driver\SWM320_spi.c</FilePath>
             </File>
             <File>
               <FileName>SWM320_can.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\SWM320_StdPeriph_Driver\CSL\SWM320_StdPeriph_Driver\SWM320_can.c</FilePath>
+              <FilePath>..\CSL\SWM320_StdPeriph_Driver\SWM320_can.c</FilePath>
             </File>
             <File>
               <FileName>SWM320_crc.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\SWM320_StdPeriph_Driver\CSL\SWM320_StdPeriph_Driver\SWM320_crc.c</FilePath>
+              <FilePath>..\CSL\SWM320_StdPeriph_Driver\SWM320_crc.c</FilePath>
             </File>
             <File>
               <FileName>SWM320_lcd.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\SWM320_StdPeriph_Driver\CSL\SWM320_StdPeriph_Driver\SWM320_lcd.c</FilePath>
+              <FilePath>..\CSL\SWM320_StdPeriph_Driver\SWM320_lcd.c</FilePath>
             </File>
             <File>
               <FileName>SWM320_rtc.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\SWM320_StdPeriph_Driver\CSL\SWM320_StdPeriph_Driver\SWM320_rtc.c</FilePath>
+              <FilePath>..\CSL\SWM320_StdPeriph_Driver\SWM320_rtc.c</FilePath>
             </File>
             <File>
               <FileName>SWM320_sdio.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\SWM320_StdPeriph_Driver\CSL\SWM320_StdPeriph_Driver\SWM320_sdio.c</FilePath>
+              <FilePath>..\CSL\SWM320_StdPeriph_Driver\SWM320_sdio.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -511,22 +496,12 @@
             <File>
               <FileName>system_SWM320.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\SWM320_StdPeriph_Driver\CSL\CMSIS\DeviceSupport\system_SWM320.c</FilePath>
+              <FilePath>..\CSL\CMSIS\DeviceSupport\system_SWM320.c</FilePath>
             </File>
             <File>
               <FileName>startup_SWM320.s</FileName>
               <FileType>2</FileType>
-              <FilePath>..\..\SWM320_StdPeriph_Driver\CSL\CMSIS\DeviceSupport\startup\arm\startup_SWM320.s</FilePath>
-            </File>
-          </Files>
-        </Group>
-        <Group>
-          <GroupName>SBUS</GroupName>
-          <Files>
-            <File>
-              <FileName>SBUS.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\SBUS.c</FilePath>
+              <FilePath>..\CSL\CMSIS\DeviceSupport\startup\arm\startup_SWM320.s</FilePath>
             </File>
           </Files>
         </Group>
@@ -583,5 +558,26 @@
       </Groups>
     </Target>
   </Targets>
+
+  <RTE>
+    <apis/>
+    <components/>
+    <files/>
+  </RTE>
+
+  <LayerInfo>
+    <Layers>
+      <Layer>
+        <LayName>&lt;Project Info&gt;</LayName>
+        <LayDesc></LayDesc>
+        <LayUrl></LayUrl>
+        <LayKeys></LayKeys>
+        <LayCat></LayCat>
+        <LayLic></LayLic>
+        <LayTarg>0</LayTarg>
+        <LayPrjMark>1</LayPrjMark>
+      </Layer>
+    </Layers>
+  </LayerInfo>
 
 </Project>
