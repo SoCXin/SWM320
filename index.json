@@ -1,26 +1,26 @@
 {
     "type":"MCU",
-    "name":"CH554",
+    "name":"SWM320",
     "series":["CH554T","CH554E","CH554G","CH554P"],
     "compatible":["CH552","CH551"],
-    "price":[3.5,4.5],
-    "description":"WCH 1T 8051 MCU",
+    "price":[6.5,11.5],
+    "description":"Synwit Cortex-M4 MCU",
     "peripheral": ["TIM","ADC","USB","UART","SPI","LDO","PWM"],
     "package":["MSOP10","QFN16","SOP16","TSSOP20"],
     "RAM":[1,1],
     "ROM":[16,16],
     "DATA":[128,128],
     "manufacturer": {
-        "vendor":"WCH",
-        "homepage": "http://www.wch.cn/products/CH554.html"
+        "vendor":"Synwit",
+        "homepage": "http://www.synwit.cn/productList1/9.html"
     },
-    "url":"http://www.SoC.xin/CH554",
-    "repo":"https://github.com/SoCXin/CH554",
-    "version":"1.7.0",
+    "url":"http://www.SoC.xin/SWM320",
+    "repo":"https://github.com/SoCXin/SWM320",
+    "version":"1.0.0",
     "Core": {
         "num": 1,
-        "architecture":"8051",
-        "Freq":[8,24]
+        "architecture":"Cortex-M4",
+        "Freq":[8,120]
     },
     "UART": {
         "mark": ["UART1","UART2"],
