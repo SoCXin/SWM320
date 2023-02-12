@@ -1,77 +1,37 @@
 {
     "type":"MCU",
     "name":"SWM320",
-    "series":["CH554T","CH554E","CH554G","CH554P"],
-    "compatible":["CH552","CH551"],
-    "price":[6.5,11.5],
-    "description":"Synwit Cortex-M4 MCU",
-    "peripheral": ["TIM","ADC","USB","UART","SPI","LDO","PWM"],
-    "package":["MSOP10","QFN16","SOP16","TSSOP20"],
-    "RAM":[1,1],
-    "ROM":[16,16],
-    "DATA":[128,128],
+    "title": "Synwit SWM320 MCU",
+    "description":"Synwit MCU",
+    "Core": {
+        "CoreNum": 1,
+        "Core":"Cortex-M4",
+        "Fmax":120,
+        "DMIPS": 45,
+        "CoreMark": 100
+    },
     "manufacturer": {
         "vendor":"Synwit",
-        "homepage": "http://www.synwit.cn/productList1/9.html"
+        "homepage":"http://www.synwit.cn"
     },
-    "url":"http://www.SoC.xin/SWM320",
-    "repo":"https://github.com/SoCXin/SWM320",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/SoCXin/SWM320.git"
+    },
     "version":"1.0.0",
-    "Core": {
-        "num": 1,
-        "architecture":"Cortex-M4",
-        "Freq":[8,120]
+    "series":["SWM320"],
+    "package":["QFN40","LQFP48","LQFP64"],
+    "peripheral": ["ADC","CAN","USART","SPI","I2C"],
+    "temp": [-40,85],
+    "volt": [2.3,3.6],
+    "ESD": {
+        "HBM": 4000,
+        "CDM": 500
     },
-    "UART": {
-        "mark": ["UART1","UART2"],
-        "BIT":[5,6,7,8,9],
-        "ISO7816":true,
-        "IrDA":true,
-        "LIN":true,
-        "FIFO": 16,
-        "BPS": [48,3000000]
-    },
-    "TIM": {
-        "resolution":[16,16,16],
-        "rate": 1024
-    },
-    "CLK": {
-        "HSI": [24000],
-        "LSI": [32],
-        "PLL": [16000,96000],
-        "DIV": [1,128],
-        "SYS": [187,24000],
-        "accuracy": 0.02
-    },
-    "ADC": {
-        "num": 1,
-        "channel": 4,
-        "resolution": 8,
-        "rate": 2400
-    },
-    "USB": {
-        "num": 1,
-        "FIFO": 64,
-        "more":["FS","type-C","Host","Device"]
-    },
-    "PWR": {
-        "VDD": [2800,5000],
-        "Ivdd": 3.5,
-        "LDO": [5000,3300],
-        "rate": 1024
-    },
-    "PWM": {
-        "num": 2,
-        "resolution": 8,
-        "rate": 256
-    },
-    "EMC": {
-        "EFT": 2000,
-        "ESD": 4000
-    },
-    "upload": {
-        "ISP": true,
-        "SWD": true,
-        "speed": 115200
-    }
+    "keywords": [
+        "Cortex-M4",
+        "Synwit",
+        "ADC","CAN","I2C","SPI","USART"
+    ]
 }
+

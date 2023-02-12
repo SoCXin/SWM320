@@ -1,26 +1,54 @@
-*.pyc
 .pio/
 .vscode/
-# General temp files
+__pycache__/
+settings
+Debug
+*.py[cod]
+*$py.class
+*__pyc*/
 *.DS_Store
-*.swp
-*.lck
 *.autosave
 *~
-
-# GNU/Make
-*/*.s
-
-# SDCC
-*.adb
-*.hex
-*.lst
+~*
+.settings
+output
+out/
+# .mxproject
+# Change*
+# CHANGE*
+*.swp
+*.lck
+*.log
+*.ewt
+*.ewd
+*.crf
+*.dep
 *.map
-*.asm
-*.ihx
-*.lk
-*.mem
-*.rel
-*.rst
-*.sym
+*.hex
 *.bin
+*.bak
+# *.txt
+*.lst
+*.sct
+*.elf
+# *.ini
+# *cm3*
+# *cm4*
+# *cm7*
+*.uvgu*
+tests
+# mk
+*.launch
+DebugConfig
+RTE
+*.d
+*.o
+*.axf
+*.htm
+*.lnp
+*.scvd
+*.iex
+Obj
+List
+Exe
+TEST/
