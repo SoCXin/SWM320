@@ -27,7 +27,8 @@
 
 ## [选型建议](https://github.com/SoCXin/SWM320)
 
-[SWM320](https://item.szlcsc.com/136891.html)
+[SWM320](https://item.szlcsc.com/136891.html)定位电机控制系列
 
+[Synwit](http://www.synwit.cn)其他的芯片系列包括用于电机控制的[SWM181](https://github.com/SoCXin/SWM181)和屏幕驱动的[SWM34S](https://github.com/SoCXin/SWM34S)
 
 ## [www.SoC.xin](http://www.SoC.Xin)
